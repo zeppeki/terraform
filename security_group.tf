@@ -6,7 +6,7 @@ resource "aws_security_group" "ssh" {
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_blocks = "${var.myip}"
+    cidr_blocks = ["${var.myip}"]
   }
   egress {
     from_port   = 0
@@ -24,7 +24,7 @@ resource "aws_security_group" "http" {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_blocks = "${var.myip}"
+    cidr_blocks = ["${var.myip}"]
   }
   egress {
     from_port   = 0
