@@ -6,3 +6,5 @@ variable "name" {
   default = "tf"
 }
 
+variable "myip" { }
+
